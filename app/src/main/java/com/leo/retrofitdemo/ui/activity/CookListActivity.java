@@ -33,10 +33,11 @@ public class CookListActivity extends AppCompatActivity {
         init();
     }
 
+    //------------------------  --------------------------
     private void init() {
         mAdapter = new CookListAdapter(this);
         App
-                .initCookList(1,20)
+                .initCookList(1, 20)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .map(new Func1<CookListBean, List<CookListBean.TngouBean>>() {
@@ -49,7 +50,7 @@ public class CookListActivity extends AppCompatActivity {
             public void call(List<CookListBean.TngouBean> list) {
                 mAdapter.addAll(list);
                 mCookRecycler.setLayoutManager(new
-                        LinearLayoutManager(CookListActivity.this,LinearLayoutManager.VERTICAL,false));
+                        LinearLayoutManager(CookListActivity.this, LinearLayoutManager.VERTICAL, false));
                 mCookRecycler.setAdapter(mAdapter);
             }
         });

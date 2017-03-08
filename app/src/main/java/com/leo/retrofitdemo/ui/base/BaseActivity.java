@@ -16,25 +16,15 @@ import java.lang.reflect.Field;
  */
 
 public abstract class BaseActivity extends AppCompatActivity {
-    //布局文件ID
-    protected abstract int getContentViewId();
-
-    //布局中Fragment的ID
-    protected abstract int getFragmentContentId();
-
-
-
-
-
-    //返回键返回事件
     @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (KeyEvent.KEYCODE_BACK == keyCode) {
-            if (getSupportFragmentManager().getBackStackEntryCount() == 1) {
-                finish();
-                return true;
-            }
-        }
-        return super.onKeyDown(keyCode, event);
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        initView(savedInstanceState);
     }
+
+    private void initView(Bundle savedInstanceState) {
+
+    }
+
+
 }

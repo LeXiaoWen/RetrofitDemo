@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.leo.retrofitdemo.ui.activity.LoginActivity">
+
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:hint="email"
+        android:maxLines="1"/>
+
+    <EditText
+        android:id="@+id/account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:hint="account"
+        android:maxLines="1"/>
+
+    <EditText
+        android:id="@+id/pass_word"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:hint="password"
+        android:maxLines="1"
+        android:password="true"/>
+
+
+    <Button
+        android:id="@+id/regist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="10dp"
+        android:text="Regist"/>
+
+</LinearLayout>
